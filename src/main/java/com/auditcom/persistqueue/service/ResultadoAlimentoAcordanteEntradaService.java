@@ -1,5 +1,6 @@
 package com.auditcom.persistqueue.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class ResultadoAlimentoAcordanteEntradaService {
 	private IResultadoAlimentoAcordanteEntradaRepository resultadoAlimentoAcordanteEntradaRepository;
 
 	public ResultadoAlimentoAcordanteEntrada add(ResultadoAlimentoAcordanteEntrada resultadoAlimentoAcordanteEntrada) {
+		resultadoAlimentoAcordanteEntrada.setDataCriacao(LocalDateTime.now());
 		resultadoAlimentoAcordanteEntradaRepository.save(resultadoAlimentoAcordanteEntrada);
 		return resultadoAlimentoAcordanteEntrada;
 	}
