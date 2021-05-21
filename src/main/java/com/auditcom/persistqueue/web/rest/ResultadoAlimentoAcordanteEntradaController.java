@@ -12,7 +12,7 @@ import com.auditcom.persistqueue.domain.ResultadoAlimentoAcordanteEntrada;
 import com.auditcom.persistqueue.service.ResultadoAlimentoAcordanteEntradaService;
 
 @RestController
-@RequestMapping("/persist/")
+@RequestMapping("/persist/exit/")
 public class ResultadoAlimentoAcordanteEntradaController {
 
 	@Autowired

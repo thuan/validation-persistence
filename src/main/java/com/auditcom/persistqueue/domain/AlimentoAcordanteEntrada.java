@@ -1,5 +1,8 @@
 package com.auditcom.persistqueue.domain;
 
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,36 +22,36 @@ public class AlimentoAcordanteEntrada implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	@Column(name = "id_nf")
 	private String idNf;
-
 	private int crt;
+	@Column(name = "percentual_icms")
 	private double percentualICMS;
-
+	@Column(name = "uf_emitente")
 	private String ufEmitente;
+	@Column(name = "uf_destinatario")
 	private String ufDestinatario;
-
+	@Column(name = "valor_item")
 	private double valorItem;
-
+	@Column(name = "valor_ipi")
 	private double valorIPI;
-
+	@Column(name = "valor_frete")
 	private double valorFrete;
-
+	@Column(name = "valor_seguro")
 	private double valorSeguro;
-
+	@Column(name = "valor_outros")
 	private double valorOutros;
-
 	private int cfop;
-
+	@Column(name = "cnpj_emitente")
 	private String cnpjEmitente;
-
+	@Column(name = "cnpj_destinatario")
 	private String cnpjDestinatario;
-
 	private String categoria;
-
 	private String cst;
-
+	@Column(name = "norma_execucao")
 	private String normaExecucao;
+	@Column(name = "data_criacao")
+	private LocalDateTime dataCriacao;
 
 	public Long getId() {
 		return id;
@@ -184,6 +187,14 @@ public class AlimentoAcordanteEntrada implements java.io.Serializable {
 
 	public void setNormaExecucao(String normaExecucao) {
 		this.normaExecucao = normaExecucao;
+	}
+
+	public LocalDateTime getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(LocalDateTime dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 
 }

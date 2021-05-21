@@ -22,6 +22,8 @@ public class ResultadoAlimentoAcordanteEntrada implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(name = "id_nf")
+	private String idNf;
 	@Column(name = "valor_imposto")
 	private double valorImposto;
 	@Column(name = "valor_base_de_calculo")
@@ -50,6 +52,14 @@ public class ResultadoAlimentoAcordanteEntrada implements java.io.Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getIdNf() {
+		return idNf;
+	}
+
+	public void setIdNf(String idNf) {
+		this.idNf = idNf;
 	}
 
 	public double getValorImposto() {
